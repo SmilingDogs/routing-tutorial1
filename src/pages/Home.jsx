@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../App";
 
-const Home = ({ onLogin}) => {
-  const {token} = useContext(AuthContext);
+const Home = () => {
+  const { token, onLogin } = useContext(AuthContext);
   return (
     <>
       <h2>Home (Public)</h2>

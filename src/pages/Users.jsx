@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, Outlet, useSearchParams } from "react-router-dom";
 import { AuthContext } from "../App";
 
-const Users = ({ users }) => {
+const Users = ({users}) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const { token } = useContext(AuthContext);
     const searchTerm = searchParams.get('name') || '';
