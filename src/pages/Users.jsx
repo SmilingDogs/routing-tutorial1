@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import { Link, Outlet, useSearchParams } from "react-router-dom";
+import { AuthContext } from "../App";
 
 const Users = ({ users }) => {
     const [searchParams, setSearchParams] = useSearchParams();
-
+    const { token } = useContext(AuthContext);
     const searchTerm = searchParams.get('name') || '';
 
     const handleSearch = (event) => {
@@ -19,7 +21,8 @@ const Users = ({ users }) => {
 
     return (
         <>
-            <h2>Users</h2>
+            <h2>Users (Protected)</h2>
+            <div>Authenticated as {token}</div>
             <input
                 type="text"
                 value={searchTerm}
@@ -45,5 +48,5 @@ const Users = ({ users }) => {
         </>
     );
 };
-//* Outlet is where we want to render Child routes (e.g. users/userId)
+//* Outlet is where we want to render Child routes (e.g. component <User /> on route: users/userId)
 export default Users;
