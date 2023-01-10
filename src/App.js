@@ -1,5 +1,5 @@
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import { useState, createContext } from 'react';
+import { useState } from 'react';
 import './App.css';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -17,8 +17,6 @@ const initialUsers = [
   { id: '4', fullName: 'Bruce Lee' },
   { id: '5', fullName: 'Jackie Chan' },
 ];
-
-export const AuthContext = createContext(null);
 
 const App = () => {
   const navigate = useNavigate();

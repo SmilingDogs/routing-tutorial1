@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, Outlet, useSearchParams } from "react-router-dom";
-import { AuthContext } from "../App";
+import { AuthContext } from "../context/AuthProvider";
+
 
 const Users = ({users}) => {
     const [searchParams, setSearchParams] = useSearchParams();

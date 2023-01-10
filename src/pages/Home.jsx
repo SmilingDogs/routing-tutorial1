@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { AuthContext } from "../App";
+import { AuthContext } from "../context/AuthProvider";
+
 
 const Home = () => {
   const { token, onLogin } = useContext(AuthContext);

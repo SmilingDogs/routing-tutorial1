@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import { fakeAuth } from "../utils/fakeAPI";
-import { AuthContext } from "../App";
 import { useNavigate, useLocation } from 'react-router-dom';
+
+export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(null);
